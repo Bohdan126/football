@@ -30,6 +30,7 @@ $categories = $db->select($query);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
 
     <title>Football blog</title>
 
@@ -91,7 +92,7 @@ $categories = $db->select($query);
                         <a class="text-dark" href="#"><?php echo shortenText($row['title'],'70'); ?></a>
                     </h3>
                     <div class="mb-1 text-muted"><?php echo formatDate($row['date']); ?></div>
-                    <p class="card-text mb-auto"><?php echo shortenText($row['body'],'200'); ?></p>
+                    <p class="card-text mb-auto"><?php echo shortenText($row['body'],'180'); ?></p>
                     <a href="post.php?id=<?php echo urlencode($row['id']); ?>">Continue reading</a>
                 </div>
                 <!--<img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">-->
