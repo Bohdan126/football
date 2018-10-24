@@ -3,12 +3,8 @@
 </main><!-- /.container -->
 
 <footer class="blog-footer">
-  <p>All rights reserved &copy; <?php echo date('d F Y'); ?>.</p>
-  <p>
-  <p>Made by <a
-      href="https://www.facebook.com/profile.php?id=100017334785880">Rollins</a>
-  </p>
-  </p>
+    <p>All rights reserved &copy; <?php echo date('d F Y'); ?>.</p>
+    <p>Made by <a href="https://www.facebook.com/profile.php?id=100017334785880">Rollins</a></p>
 </footer>
 
 <!-- Bootstrap core JavaScript

@@ -4,14 +4,15 @@
 $db = new Database();
 
 //Check URL For Category
-if (isset($_GET['category'])){
-    $category = $_GET['category'];
+if (isset($_GET['category'])) {
+  $category = $_GET['category'];
   //Create Query
-  $query = "SELECT * FROM posts  WHERE category = ".$category;
+  $query = "SELECT * FROM posts  WHERE category = " . $category;
 
   //Run Query
   $posts = $db->select($query);
-} else {
+}
+else {
   //Create Query
   $query = "SELECT * FROM posts ORDER BY id DESC LIMIT 5;";
 
