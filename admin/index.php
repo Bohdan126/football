@@ -1,4 +1,5 @@
 <?php require_once 'includes/header.php' ?>
+<?php require_once '../registration/server.php'?>
 <?php
 //Create DB Object
 $db = new Database();
@@ -15,8 +16,11 @@ $query = "SELECT * FROM categories ORDER BY categories.id DESC;";
 //Run Query
 $categories = $db->select($query);
 ?>
-
-
+<?php
+if (isset($_SESSION['username'])) : ?>
+    <div class="welcome">Welcome <strong><?php echo $_SESSION['username']; ?>!</strong>
+    <p><a href="index.php?logout='1'" style="color: red">Logout</a></p></div>
+<?php endif; ?>
 <table class="table">
     <tr>
         <th>Post ID#</th>

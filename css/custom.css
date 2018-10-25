@@ -3,6 +3,7 @@
 .blog-header {
     line-height: 1;
     border-bottom: 1px solid #e5e5e5;
+    text-align: center;
 }
 
 .blog-header-logo  {
@@ -150,4 +151,110 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-header-logo {
     margin-bottom: 15px;
+}
+
+/*
+ * Styles for registration and login forms
+ */
+.register-login * {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.register-login body{
+    font-size: 120%;
+    background: #F8F8FF;
+}
+.register-login-header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: white;
+    background: #31c10c;
+    text-align: center;
+    border: 1px solid #B0C4DE;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+}
+
+.register-login form {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #B0C4DE;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+}
+.input-group {
+    margin: 10px 0px 10px 0px;
+}
+.input-group label{
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.btn-register-login {
+    padding: 3%;
+    width: 30%;
+    font-size: 15px;
+    color: white;
+    background: #31c10c;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-register-login span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-register-login span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn-register-login:hover span {
+    padding-right: 25px;
+}
+
+.btn-register-login:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.error {
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: center;
+}
+.pas-description {
+    color: #182ac3;
+}
+.welcome {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
 }
