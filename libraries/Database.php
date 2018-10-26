@@ -100,8 +100,9 @@ class Database {
       die('Error : (' . $this->link->error . ')' . $this->link->error);
     }
   }
+
   /**
-   * Insert
+   * Insert Registration
    */
   public function insertRegistration($query) {
     $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);

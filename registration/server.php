@@ -42,6 +42,37 @@ if (isset($_POST['register'])) {
   }
 }
 
+//log user in from login page
+$db = new Database();
+$errors = array();
+
+
+if (isset($_POST['login'])){
+  $username = mysqli_real_escape_string($db->link, $_POST['username']);
+  $password = mysqli_real_escape_string($db->link, $_POST['password']);
+
+  //Simple Validation
+  if (empty($username)) {
+    array_push($errors, "Username is required");
+  }
+  if (empty($password)) {
+    array_push($errors, "Password is required");
+  }
+  if (count($errors) == 0){
+    $password = md5($password);
+    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    $insert_row = $db->select($query);
+
+    if ($insert_row && mysqli_num_rows($insert_row) == 1){
+      $_SESSION['username'] = $username;
+      $_SESSION['success'] = 'You are now logged in';
+      header('location: ../admin');
+    } else {
+      array_push($errors, "wrong username/password combination");
+    }
+  }
+}
+
 // logout
 if (isset($_GET['logout'])){
   session_destroy();
