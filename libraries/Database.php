@@ -100,4 +100,20 @@ class Database {
       die('Error : (' . $this->link->error . ')' . $this->link->error);
     }
   }
+
+  /**
+   * Insert Registration
+   */
+  public function insertRegistration($query) {
+    $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
+
+    //Validate Insert
+    if ($insert_row) {
+      header("Location: ../admin");
+      exit();
+    }
+    else {
+      die('Error : (' . $this->link->error . ')' . $this->link->error);
+    }
+  }
 }

@@ -35,7 +35,7 @@ $categories = $db->select($query);
         <div class="blog-post">
             <h2 class="blog-post-title"><?php echo $row['title']; ?></h2>
             <p class="blog-post-meta"><?php echo formatDate($row['date']); ?> by
-                <a href="#"><?php echo $row['author']; ?></a>
+                <a><?php echo $row['author']; ?></a>
             </p>
           <?php echo shortenText($row['body']); ?>
             <a class="readmore"
