@@ -34,8 +34,7 @@
             <a class="p-2 text-muted" href="index.php">Dashboard</a>
             <a class="p-2 text-muted" href="add_post.php">Add Post</a>
             <a class="p-2 text-muted" href="add_category.php">Add Category</a>
-            <a class="p-2 text-muted pull-right" href="http://football.loc/">Visit
-                Blog</a>
+            <a class="p-2 text-muted pull-right" href="/">Visit Blog</a>
         </nav>
     </div>
 </div>
