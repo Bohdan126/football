@@ -31,11 +31,10 @@
   <?php endif; ?>
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-            <a class="p-2 text-muted" href="index.php">Dashboard</a>
-            <a class="p-2 text-muted" href="add_post.php">Add Post</a>
-            <a class="p-2 text-muted" href="add_category.php">Add Category</a>
-            <a class="p-2 text-muted pull-right" href="http://football.loc/">Visit
-                Blog</a>
+            <a class="p-2 navigation-link" href="index.php">Dashboard</a>
+            <a class="p-2 navigation-link" href="add_post.php">Add Post</a>
+            <a class="p-2 navigation-link" href="add_category.php">Add Category</a>
+            <a class="p-2 navigation-link pull-right" href="/">Visit Blog</a>
         </nav>
     </div>
 </div>
