@@ -351,7 +351,8 @@ main.container {
     background: #F8F8FF;
 }
 .register-login-header {
-    width: 30%;
+    width: 70%;
+    max-width: 500px;
     margin: 50px auto 0;
     color: white;
     background: rgba(0,0,0,0.8);
@@ -362,12 +363,14 @@ main.container {
 }
 
 .register-login form {
-    width: 30%;
+    width: 70%;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #B0C4DE;
     background: rgba(0,0,0,0.8);
 }
+
 .input-group {
     margin: 10px 0 10px 0;
 }

@@ -26,7 +26,7 @@
 <header class="blog-header py-3">
     <div class="container">
         <div class="row flex-nowrap justify-content-between align-items-center header-blocks">
-            <div class="col-4 text-center logo">display-4
+            <div class="col-4 text-center logo">
                 <a href="/"><img
                             src="/images/logo.png"</a>
             </div>
