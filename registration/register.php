@@ -19,26 +19,29 @@
   <?php include ('errors.php')?>
   <div class="input-group">
     <label>Username</label>
-    <input type="text" name="username" value="<?php if (!empty($_POST['username'])){echo $_POST['username'];}?>">
+    <input placeholder="Username" type="text" name="username" value="<?php if (!empty($_POST['username'])){echo $_POST['username'];}?>">
   </div>
   <div class="input-group">
     <label>Email</label>
-    <input type="email" name="email" value="<?php if (!empty($_POST['email'])){echo $_POST['email'];}?>">
+    <input placeholder="Email" type="email" name="email" value="<?php if (!empty($_POST['email'])){echo $_POST['email'];}?>">
   </div>
   <div class="input-group">
     <label>Password</label>
-    <input type="password" name="password_1" pattern="^\S*(?=\S{6,25})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$">
+    <input placeholder="Password" type="password" name="password_1" pattern="^\S*(?=\S{6,25})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$">
     <p class="pas-description">A password must be at least six characters long including one letter, one lowercase letter, and a number</p><br>
   </div>
   <div class="input-group">
     <label>Confirm Password</label>
-    <input type="password" name="password_2" pattern="^\S*(?=\S{6,25})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$">
+    <input placeholder="Confirm Password" type="password" name="password_2" pattern="^\S*(?=\S{6,25})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$">
   </div>
   <div class="input-group">
     <button type="submit" name="register" class="btn-register-login"><span>Register</span></button>
   </div>
   <p>
     Already a member? <a href="login.php">Sign in</a>
+  </p>
+  <p>
+    <a href="/">Back to site</a>
   </p>
 </form>
 </div>

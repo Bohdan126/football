@@ -1,28 +1,65 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
+@import "fonts.css";
+
+html,
+body {
+    height: 100%;
+    min-width: 480px;
+}
+
+
+body {
+    background: url(/images/bg-main.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
 .blog-header {
     line-height: 1;
     border-bottom: 1px solid #e5e5e5;
     text-align: center;
+    font-family: "Montserrat Regular";
+    background: #02081c;
+    color: #fff;
 }
 
 .blog-header-logo  {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-family: "Montserrat Bold", Georgia, "Times New Roman", serif;
     font-size: 2.25rem;
-
 }
-.blog-header-logo img {
-    width: 150px;
-    height: 120px;
 
+.logo img {
+    width: 150px;
+    height: auto;
+    filter: invert(100%);
 }
 
 .blog-header-logo:hover {
     text-decoration: none;
+    color: #297a11;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-family: "Montserrat Bold", Georgia, "Times New Roman", serif;
+}
+
+p {
+    font-family: "Montserrat Regular", sans-serif;
+}
+
+a {
+    font-family: "Montserrat Bold", sans-serif;
+    transition: all .4s;
+    color: #297a11;
+}
+
+a:hover {
+    color: #fff;
 }
 
 .display-4 {
@@ -34,12 +71,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.navigation-link {
+    color: #fff;
+}
+
 .nav-scroller {
     position: relative;
     z-index: 2;
     height: 2.75rem;
     overflow-y: hidden;
     border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 0 !important;
 }
 
 .nav-scroller .nav {
@@ -73,9 +115,61 @@ h1, h2, h3, h4, h5, h6 {
 
 .h-250 { height: 250px; }
 @media (min-width: 768px) {
-    .h-md-250 { height: 250px; }
+    .h-md-250 { height: 290px; }
 }
 
+/*
+* Jumbotron block
+*/
+.block-wrapper-jumbotron {
+    background: url('/images/main-new-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 -15px;
+}
+.block-wrapper-jumbotron .jumbotron {
+    background-color: rgba(0,0,0,0.6);
+    margin-bottom: 0;
+}
+
+.card-container {
+    background: url('/images/card-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapper-card {
+    background: rgba(0,0,0, 0.6);
+    margin: 0;
+}
+
+.card {
+    border-radius: 0;
+    height: 290px;
+    background: rgba(0,0,0,0.7);
+    margin-bottom: 0 !important;
+    transition: all .4s;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .card {
+        height: 375px;
+    }
+}
+
+.text-card-color {
+    color: #afaaaa;
+    transition: all .4s;
+}
+
+.card:hover {
+    background: rgba(0,0,0, 0.9);
+}
+
+.card:hover .text-card-color {
+    color: #fff;
+}
 /*
  * Blog name and description
  */
@@ -86,7 +180,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 .blog-description {
     font-size: 1.1rem;
-    color: #999;
+    color: #fff;
+}
+
+.sing-up-link {
+    color: #fff;
+    border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .sing-up {
+        justify-content: center !important;
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 40em) {
@@ -106,7 +212,13 @@ h1, h2, h3, h4, h5, h6 {
 /*
  * Blog posts
  */
+.blog-main {
+    padding-top: 45px;
+    color: #fff;
+}
+
 .blog-post {
+    color: #fff;
     margin-bottom: 4rem;
 }
 .blog-post-title {
@@ -117,99 +229,188 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.25rem;
     color: #999;
 }
+
+.blog-post-meta a:hover {
+    color: #297a11 !important;
+}
 /*
  * Footer
  */
 .blog-footer {
+    font-family: 'Montserrat Regular';
     padding: 2.5rem 0;
-    color: #999;
+    color: #fff;
     text-align: center;
-    background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
+    background: #02081c;
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    flex: 0 0 auto;
 }
 .blog-footer p:last-child {
     margin-bottom: 0;
+}
+
+.blog-footer a {
+    color: #fff;
+    font-family: 'Montserrat Bold';
 }
 
 /*
  * Custom classes
  */
 .readmore {
+    border-top: 1px solid #38393c;
+    border-left: 1px solid #303133;
     display: block;
-    text-align: center;
-    padding: 5px;
-    background: #f4f4f4;
-    margin-top: 10px;
-    color: #666;
+    width: fit-content;
+    color: #fff;
+    background: #18232f;
+    padding: 6px 22px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 2px 3px 4px rgba(0,0,0, .6);
+    transition: background .4s;
+    margin-top: 15px;
 }
 
 .readmore:hover {
-    background: #ccc;
-    color: #666;
     text-decoration: none;
+    color: #fff;
+    background-color: #297a11;
 }
 
 .blog-header-logo {
     margin-bottom: 15px;
+    color: #fff;
 }
 
+@media (max-width: 768px) {
+    .header-blocks {
+        flex-direction: column;
+    }
+
+    .logo {
+        flex: 1 50%;
+        justify-content: center;
+    }
+}
+
+
+.top-content,
+main.container {
+    background: #0d0e10;
+}
+
+main.container {
+    flex: 1 0 auto;
+}
+
+.blog-sidebar {
+    background: url('/images/aside-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+}
+
+.aside-wrapper {
+    height: 100%;
+    padding: 0 15px;
+    background: rgba(0,0,0,0.9);
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 180px;
+}
+
+@media (max-width: 768px) {
+    .aside-wrapper {
+        padding: 0;
+    }
+}
+
+.aside-wrapper .p-3 {
+    margin-top: 0;
+}
+
+.aside-wrapper .contacts {
+    background: transparent !important;
+    padding: 0 !important;
+    margin-top: 100px;
+}
 /*
  * Styles for registration and login forms
  */
 .register-login * {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 .register-login body{
     font-size: 120%;
     background: #F8F8FF;
 }
 .register-login-header {
-    width: 30%;
-    margin: 50px auto 0px;
+    width: 70%;
+    max-width: 500px;
+    margin: 50px auto 0;
     color: white;
-    background: #31c10c;
+    background: rgba(0,0,0,0.8);
     text-align: center;
     border: 1px solid #B0C4DE;
     border-bottom: none;
-    border-radius: 10px 10px 0px 0px;
     padding: 20px;
 }
 
 .register-login form {
-    width: 30%;
-    margin: 0px auto;
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #B0C4DE;
-    background: white;
-    border-radius: 0px 0px 10px 10px;
+    background: rgba(0,0,0,0.8);
 }
+
 .input-group {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0 10px 0;
 }
 .input-group label{
-    display: block;
-    text-align: left;
-    margin: 3px;
+    display: none;
 }
 .input-group input {
     height: 30px;
     width: 93%;
-    padding: 5px 10px;
+    padding: 5px 10px 0;
     font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid gray;
+    background-color: transparent !important;
+    color: #fff !important;
+    border-width: 0 0 1px 0;
+}
+
+.input-group input:-webkit-autofill,
+.input-group input:-webkit-autofill:hover,
+.input-group input:-webkit-autofill:focus {
+    background-color: transparent !important;
+}
+
+.input-group input:focus {
+    border: none;
+    outline: none;
 }
 
 .btn-register-login {
-    padding: 3%;
-    width: 30%;
-    font-size: 15px;
-    color: white;
-    background: #31c10c;
+    display: block;
+    width: fit-content;
+    color: #fff;
+    background: #18232f;
+    padding: 12px 40px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 2px 3px 4px rgba(0,0,0, .6);
+    transition: background .4s;
+    margin: 15px auto;
     border: none;
-    border-radius: 5px;
 }
 
 .btn-register-login span {
@@ -237,24 +438,32 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
 }
 
+.register-login form p {
+    text-align: center;
+    color: #fff;
+    margin-top: 5px;
+}
+
 .error {
     width: 92%;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 10px;
     border: 1px solid #a94442;
-    color: #a94442;
-    background: #f2dede;
     border-radius: 5px;
     text-align: center;
 }
+
+.error p {
+    color: #a94442;
+    font-weight: bold;
+}
+
 .pas-description {
     color: #182ac3;
 }
 .welcome {
     width: 30%;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 20px;
-    background: white;
-    border-radius: 0px 0px 10px 10px;
     text-align: center;
 }

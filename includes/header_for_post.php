@@ -22,28 +22,32 @@
 
 <body>
 
-<div class="container">
-    <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-4 text-center">
-                <a class="blog-header-logo text-dark" href="/"><img
-                            src="/images/Ligue-1-logo-france-880x660.png"</a>
+
+<header class="blog-header py-3">
+    <div class="container">
+        <div class="row flex-nowrap justify-content-between align-items-center header-blocks">
+            <div class="col-4 text-center logo">
+                <a href="/"><img
+                            src="/images/logo.png"</a>
             </div>
             <div class="col-4 text-title flex-column">
-                <a class="blog-header-logo text-dark" href="/">Football blog</a>
+                <a class="blog-header-logo" href="/">Football blog</a>
                 <p class="blog-description">Football is life…Get in the
                     Game!</p>
             </div>
-            <div class="col-4 d-flex justify-content-end align-items-center">
-                <a class="btn btn-sm btn-outline-secondary" href="../registration/login.php">Sign up</a>
+            <div class="col-4 d-flex justify-content-end align-items-center sing-up">
+                <a class="btn btn-sm btn-outline-secondary sing-up-link" href="../registration/login.php">Sign up</a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
+<div class="container top-content">
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-            <a class="p-2 text-muted" href="/">Home</a>
-            <a class="p-2 text-muted" href="/posts.php">All News</a>
+            <a class="p-2 navigation-link" href="/">Home</a>
+            <a class="p-2 navigation-link" href="/admin">Admin Area</a>
+            <a class="p-2 navigation-link" href="/posts.php">All News</a>
         </nav>
     </div>
 </div>
