@@ -5,6 +5,7 @@
 html,
 body {
     height: 100%;
+    min-width: 480px;
 }
 
 
@@ -30,9 +31,9 @@ body {
 .blog-header-logo  {
     font-family: "Montserrat Bold", Georgia, "Times New Roman", serif;
     font-size: 2.25rem;
-
 }
-.blog-header-logo img {
+
+.logo img {
     width: 150px;
     height: auto;
     filter: invert(100%);
@@ -54,10 +55,11 @@ p {
 a {
     font-family: "Montserrat Bold", sans-serif;
     transition: all .4s;
+    color: #297a11;
 }
 
 a:hover {
-    color: #297a11;
+    color: #fff;
 }
 
 .display-4 {
@@ -150,6 +152,12 @@ a:hover {
     transition: all .4s;
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+    .card {
+        height: 375px;
+    }
+}
+
 .text-card-color {
     color: #afaaaa;
     transition: all .4s;
@@ -175,9 +183,16 @@ a:hover {
     color: #fff;
 }
 
-.sing-up {
+.sing-up-link {
     color: #fff;
     border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .sing-up {
+        justify-content: center !important;
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 40em) {
@@ -270,6 +285,18 @@ a:hover {
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .header-blocks {
+        flex-direction: column;
+    }
+
+    .logo {
+        flex: 1 50%;
+        justify-content: center;
+    }
+}
+
+
 .top-content,
 main.container {
     background: #0d0e10;
@@ -293,7 +320,14 @@ main.container {
     background: rgba(0,0,0,0.9);
     color: #fff;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 180px;
+}
+
+@media (max-width: 768px) {
+    .aside-wrapper {
+        padding: 0;
+    }
 }
 
 .aside-wrapper .p-3 {
@@ -303,7 +337,7 @@ main.container {
 .aside-wrapper .contacts {
     background: transparent !important;
     padding: 0 !important;
-    margin-top: 35px;
+    margin-top: 100px;
 }
 /*
  * Styles for registration and login forms
@@ -317,7 +351,8 @@ main.container {
     background: #F8F8FF;
 }
 .register-login-header {
-    width: 30%;
+    width: 70%;
+    max-width: 500px;
     margin: 50px auto 0;
     color: white;
     background: rgba(0,0,0,0.8);
@@ -328,12 +363,14 @@ main.container {
 }
 
 .register-login form {
-    width: 30%;
+    width: 70%;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #B0C4DE;
     background: rgba(0,0,0,0.8);
 }
+
 .input-group {
     margin: 10px 0 10px 0;
 }
@@ -409,14 +446,18 @@ main.container {
 
 .error {
     width: 92%;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 10px;
     border: 1px solid #a94442;
-    color: #a94442;
-    background: #f2dede;
     border-radius: 5px;
     text-align: center;
 }
+
+.error p {
+    color: #a94442;
+    font-weight: bold;
+}
+
 .pas-description {
     color: #182ac3;
 }
