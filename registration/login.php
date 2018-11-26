@@ -32,6 +32,9 @@
     <p>
       Not yet a member? <a href="register.php">Sign in</a>
     </p>
+    <p>
+      <a href="/">Back to site</a>
+    </p>
   </form>
 </div>
 </body>

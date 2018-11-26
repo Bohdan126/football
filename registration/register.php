@@ -40,6 +40,9 @@
   <p>
     Already a member? <a href="login.php">Sign in</a>
   </p>
+  <p>
+    <a href="/">Back to site</a>
+  </p>
 </form>
 </div>
 </body>
